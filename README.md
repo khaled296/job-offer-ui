@@ -1,40 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 📝 Ajouter une Offre - Plateforme de Recrutement
 
-## Getting Started
+واجهة مستخدم تفاعلية وحديثة لصفحة "إضافة عرض عمل" تم تطويرها باستخدام **Next.js** و**Tailwind CSS**، بناءً على المواصفات التقنية والوظيفية الواردة في كراسة الشروط الخاصة بالعميل.
 
-First, run the development server:
+---
+
+## 🎯 الهدف من المشروع
+
+إنشاء واجهة تمكن المستخدم من إضافة عرض عمل بطريقتين:
+- **📄 النموذج اليدوي**: يحتوي على حقول لإدخال بيانات الوظيفة مثل:  
+  - العنوان  
+  - الوصف  
+  - المهارات المطلوبة  
+  - المستوى التعليمي  
+  - الخبرة  
+  - نوع العقد  
+  - الموقع  
+  - تاريخ الانتهاء  
+  - الراتب (اختياري)
+
+- **📎 وضع الاستيراد (simulé)**: يسمح برفع ملف (PDF, DOCX, TXT) ومحاكاة استخراج البيانات وملء النموذج تلقائيًا، مع إمكانية تعديلها يدويًا.
+
+---
+
+## 🧰 التقنيات المستخدمة
+
+- Next.js  
+- Tailwind CSS  
+- React + TypeScript  
+- Git & GitHub
+
+---
+
+## 🛠️ خطوات التثبيت والتشغيل
 
 ```bash
+# 1. استنساخ المشروع
+git clone https://github.com/username/ajouter-offre.git
+
+# 2. الدخول إلى مجلد المشروع
+cd ajouter-offre
+
+# 3. تثبيت الحزم
+npm install
+
+# 4. تشغيل الخادم المحلي
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+---
+## 📂 هيكل الملفات الأساسي
+
 ```
+next/
+├── components/ # مكونات الواجهة
+│ ├── FileImportForm.js # نموذج استيراد الملف
+│ └── ManualForm.js # نموذج الإدخال اليدوي
+│
+├── pages/ # صفحات التطبيق
+│ ├── api/ # واجهات API (إن وجدت)
+│ │ └── hello.js
+│ │
+│ ├── _app.js # إعدادات التطبيق الرئيسية
+│ ├── _document.js # إعدادات HTML العامة
+│ ├── index.js # الصفحة الرئيسية
+│ └── error.js # صفحة الأخطاء
+│
+├── public/ # ملفات ثابتة (صور، أيقونات)
+│ ├── favicon.ico # أيقونة الموقع
+│ ├── file.svg # أيقونات SVG
+│ ├── globe.svg
+│ ├── next.svg
+│ ├── vercel.svg
+│ └── window.svg
+│
+├── styles/ # ملفات الأنماط
+│ └── globals.css # أنماط عامة
+│
+├── .gitignore # ملفات مستثناة من Git
+├── package.json # إعدادات المشروع والمكتبات
+├── package-lock.json # إصدارات المكتبات الدقيقة
+├── README.md # وثيقة المشروع (هذا الملف)
+└── next.config.js # إعدادات Next.js الإضافية
+```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 العرض المؤقت
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+تم نشر نسخة مؤقتة من المشروع على Vercel للمراجعة:  
+👉 [https://job-offer-ui.vercel.app/](https://job-offer-ui.vercel.app/)
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## 📨 معلومات التواصل
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+لأي استفسار أو مراجعة، يمكن التواصل على:
 
-## Learn More
+- 📧 البريد الإلكتروني: youniskhaled94@gmail.com 
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧪 حالة التطوير
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- ✅ بناء النموذج اليدوي بالكامل  
+- ✅ محاكاة وضع الاستيراد عبر ملف  
+- ✅ تصميم متجاوب (Responsive) لجميع الأجهزة  
+- ✅ اختبار واجهة المستخدم وتجربة الاستخدام  
+- ✅ نشر مؤقت على Vercel  
+- ⏳ انتظار ملاحظات العميل للمراجعة النهائية
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
